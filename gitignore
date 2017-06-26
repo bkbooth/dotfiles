@@ -1,0 +1,9 @@
+# OS files
+.DS_Store
+
+# IDE's
+.idea
+*.swp
+
+# Others?
+.nvmrc
