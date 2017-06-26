@@ -5,10 +5,20 @@
 set nocompatible
 " Show (partial) command in the last line of the screen
 set showcmd
+" If in Insert, Replace or Visual mode put a message on the last line
+set showmode
 " When there is a previous search pattern, highlight all its matches
 set hlsearch
 " Copy indent from current line when starting a new line
 set autoindent
+" Allow background buffers
+set hidden
+" Use visual bell instead of beeping
+set visualbell
+" Disable swapfiles
+set noswapfile
+set nobackup
+set nowb
 " Map , as leader
 let mapleader=","
 " === GENERAL SETTINGS ===
@@ -48,3 +58,26 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 " === STYLE & FORMATTING ===
+
+
+" === KEY MAPPINGS ===
+" Use ; for : in normal and visual mode, less keystrokes
+nnoremap ; :
+vnoremap ; :
+" Select block
+nnoremap <leader>v v%
+" Escape visual mode easily
+inoremap jk <Esc>
+" Temporarily disable search highlight
+nmap <silent> <leader>n :silent :nohlsearch<CR>
+
+" Easier window moving and resizing
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+nnoremap <Leader>h :vertical resize -1<CR>
+nnoremap <Leader>l :vertical resize +1<CR>
+nnoremap <Leader>j :resize +1<CR>
+nnoremap <Leader>k :resize -1<CR>
+" === KEY MAPPINGS ===
