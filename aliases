@@ -1,0 +1,13 @@
+# Git
+alias gco="git checkout"
+
+# Docker
+alias dps="docker ps"
+alias dpsa="docker ps -a"
+alias drm="docker rm -fv \$(dpsa -q)"
+alias di="docker images"
+alias did="di --filter 'dangling=true'"
+alias drmi="docker rmi"
+alias drmid="drmi \$(did -q)"
+alias dcb="docker-compose build"
+alias dcu="docker-compose up"
