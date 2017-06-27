@@ -51,6 +51,16 @@ set softtabstop=2
 " === STYLE & FORMATTING ===
 
 
+" === PLUGINS CONFIG ===
+" === netrw ===
+let g:netrw_banner=0       " Suppress the banner
+let g:netrw_liststyle=3    " Tree style listing
+let g:netrw_browse_split=4 " Open files in previous window
+let g:netrw_altv=1         " Use right-splitting instead of left-splitting
+let g:netrw_winsize=25     " Use 25% of buffer width for netrw window
+" === PLUGINS CONFIG ===
+
+
 " === KEY MAPPINGS ===
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
