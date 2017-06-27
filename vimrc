@@ -11,7 +11,7 @@ set visualbell    " Use visual bell instead of beeping
 set noswapfile    " Disable swapfiles
 set nobackup      " ...
 set nowb          " ...
-let mapleader="," " Map , as leader
+let mapleader=',' " Map , as leader
 " === GENERAL SETTINGS ===
 
 
@@ -79,16 +79,16 @@ let NERDTreeIgnore=['\~$', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_compon
 
 " === Xuyuanp/nerdtree-git-plugin ===
 let g:NERDTreeIndicatorMapCustom = {
-	\ "Modified"  : "✹",
-	\ "Staged"    : "✚",
-	\ "Untracked" : "✭",
-	\ "Renamed"   : "➜",
-	\ "Unmerged"  : "═",
-	\ "Deleted"   : "✖",
-	\ "Dirty"     : "✗",
-	\ "Clean"     : "✔︎",
+	\ 'Modified'  : '✹',
+	\ 'Staged'    : '✚',
+	\ 'Untracked' : '✭',
+	\ 'Renamed'   : '➜',
+	\ 'Unmerged'  : '═',
+	\ 'Deleted'   : '✖',
+	\ 'Dirty'     : '✗',
+	\ 'Clean'     : '✔︎',
 	\ 'Ignored'   : '☒',
-	\ "Unknown"   : "?"
+	\ 'Unknown'   : '?'
 	\ }
 
 " === vim-syntastic/syntastic ===
@@ -110,7 +110,7 @@ let g:airline_powerline_fonts=1
 
 " === ryanoasis/vim-devicons ===
 autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
-let g:WebDevIconsNerdTreeAfterGlyphPadding='' " Reduce space after glyph character
+let g:WebDevIconsNerdTreeAfterGlyphPadding=''       " Reduce space after glyph character
 " === PLUGINS CONFIG ===
 
 
