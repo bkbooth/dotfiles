@@ -28,6 +28,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Various plugins
 Plugin 'tpope/vim-sensible'               " Sensible default settings
 Plugin 'altercation/vim-colors-solarized' " Solorazied colour scheme
+Plugin 'scrooloose/nerdtree'              " Project and files explorer
+Plugin 'Xuyuanp/nerdtree-git-plugin'      " Git indicators for NERD Tree
 
 " Language/syntax plugins
 
@@ -52,12 +54,22 @@ set softtabstop=2
 
 
 " === PLUGINS CONFIG ===
-" === netrw ===
-let g:netrw_banner=0       " Suppress the banner
-let g:netrw_liststyle=3    " Tree style listing
-let g:netrw_browse_split=4 " Open files in previous window
-let g:netrw_altv=1         " Use right-splitting instead of left-splitting
-let g:netrw_winsize=25     " Use 25% of buffer width for netrw window
+" === scrooloose/nerdtree ===
+let NERDTreeWinSize=40
+
+" === Xuyuanp/nerdtree-git-plugin ===
+let g:NERDTreeIndicatorMapCustom = {
+	\ "Modified"  : "✹",
+	\ "Staged"    : "✚",
+	\ "Untracked" : "✭",
+	\ "Renamed"   : "➜",
+	\ "Unmerged"  : "═",
+	\ "Deleted"   : "✖",
+	\ "Dirty"     : "✗",
+	\ "Clean"     : "✔︎",
+	\ 'Ignored'   : '☒',
+	\ "Unknown"   : "?"
+	\ }
 " === PLUGINS CONFIG ===
 
 

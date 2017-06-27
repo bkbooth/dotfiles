@@ -7,10 +7,6 @@ set guifont=Fira\ Code:h12
 
 
 " === PLUGINS CONFIG ===
-" === netrw ===
-" automatically open netrw
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+" === scrooloose/nerdtree ===
+autocmd vimenter * NERDTree
 " === PLUGINS CONFIG ===
