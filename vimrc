@@ -62,6 +62,8 @@ set softtabstop=2
 " === PLUGINS CONFIG ===
 " === scrooloose/nerdtree ===
 let NERDTreeWinSize=40
+let NERDTreeShowHidden=1
+let NERDTreeIgnore=['\~$', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'public$[[dir]]', 'tmp$[[dir]]', 'dist$[[dir]]']
 
 " === Xuyuanp/nerdtree-git-plugin ===
 let g:NERDTreeIndicatorMapCustom = {
