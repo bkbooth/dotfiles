@@ -33,10 +33,22 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'          " Git indicators for NERD Tree
 Plugin 'tpope/vim-fugitive'                   " Git wrapper
 Plugin 'airblade/vim-gitgutter'               " Git diffs in the gutter
 Plugin 'ryanoasis/vim-devicons'               " File type icons
+Plugin 'tpope/vim-surround'                   " Easily add/change/delete surrounds
+Plugin 'scrooloose/nerdcommenter'             " Commenting utils
+Plugin 'editorconfig/editorconfig-vim'        " Respect .editorconfig files
+Plugin 'vim-airline/vim-airline'              " Powerful statusline
+Plugin 'vim-airline/vim-airline-themes'       " Themes for vim-airline
 
 " Language/syntax plugins
 Plugin 'vim-syntastic/syntastic'              " Syntax checker
 Plugin 'mtscout6/syntastic-local-eslint.vim'  " Prefer local eslint over global
+Plugin 'tpope/vim-git'                        " Support for various git files
+Plugin 'pangloss/vim-javascript', { 'branch': 'develop' }
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'leshill/vim-json'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi', { 'for': 'typescript' }
+Plugin 'ElmCast/elm-vim'
 
 " Finish Vundle setup, all plugins must be added before this line
 call vundle#end()
@@ -91,6 +103,10 @@ let g:syntastic_check_on_wq=0               " Disable checks on :wq
 let g:syntastic_error_symbol=''            " Override syntastic error symbol
 let g:syntastic_warning_symbol=''          " Override syntastic warning symbol
 let g:syntastic_javascript_checkers=['eslint']
+
+" === vim-airline/vim-airline ===
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts=1
 
 " === ryanoasis/vim-devicons ===
 autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
