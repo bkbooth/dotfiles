@@ -1,17 +1,17 @@
 [user]
-  name = Ben Booth
-  email = bkbooth@gmail.com
-  signingkey = 77A86371
+	name = Ben Booth
+	email = bkbooth@gmail.com
+	signingkey = 77A86371
 [color]
-  ui = true
+	ui = true
 [push]
-  default = current
+	default = current
 [core]
-  excludesfile = /Users/ben/.gitignore
-  editor = vim
+	excludesfile = /Users/ben/.gitignore
+	editor = vim
 [alias]
-  cb = rev-parse --symbolic-full-name --abbrev-ref HEAD
-  gp = !git push --set-upstream origin HEAD:$(git cb)
-  gup = !git fetch --prune origin && git rebase -p origin/$(git cb)
+	cb = rev-parse --symbolic-full-name --abbrev-ref HEAD
+	gp = !git push --set-upstream origin HEAD:$(git cb)
+	gup = !git fetch --prune origin && git rebase -p origin/$(git cb)
 [commit]
-  gpgsign = true
+	gpgsign = true
