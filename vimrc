@@ -1,26 +1,17 @@
 " === GENERAL SETTINGS ===
 " Reference: http://vimdoc.sourceforge.net/htmldoc/options.html
 " Some sensible defaults set by vim-sensible (https://github.com/tpope/vim-sensible)
-" Use Vim settings rather then Vi settings. Must be first!
-set nocompatible
-" Show (partial) command in the last line of the screen
-set showcmd
-" If in Insert, Replace or Visual mode put a message on the last line
-set showmode
-" When there is a previous search pattern, highlight all its matches
-set hlsearch
-" Copy indent from current line when starting a new line
-set autoindent
-" Allow background buffers
-set hidden
-" Use visual bell instead of beeping
-set visualbell
-" Disable swapfiles
-set noswapfile
-set nobackup
-set nowb
-" Map , as leader
-let mapleader=","
+set nocompatible  " Use Vim settings rather then Vi settings. Must be first!
+set showcmd       " Show (partial) command in the last line of the screen
+set showmode      " If in Insert, Replace or Visual mode put a message on the last line
+set hlsearch      " When there is a previous search pattern, highlight all its matches
+set autoindent    " Copy indent from current line when starting a new line
+set hidden        " Allow background buffers
+set visualbell    " Use visual bell instead of beeping
+set noswapfile    " Disable swapfiles
+set nobackup      " ...
+set nowb          " ...
+let mapleader="," " Map , as leader
 " === GENERAL SETTINGS ===
 
 
@@ -35,8 +26,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Various plugins
-Plugin 'tpope/vim-sensible'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'tpope/vim-sensible'               " Sensible default settings
+Plugin 'altercation/vim-colors-solarized' " Solorazied colour scheme
 
 " Language/syntax plugins
 
