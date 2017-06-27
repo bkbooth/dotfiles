@@ -26,17 +26,17 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Various plugins
-Plugin 'tpope/vim-sensible'               " Sensible default settings
-Plugin 'altercation/vim-colors-solarized' " Solorazied colour scheme
-Plugin 'scrooloose/nerdtree'              " Project and files explorer
-Plugin 'Xuyuanp/nerdtree-git-plugin'      " Git indicators for NERD Tree
-Plugin 'tpope/vim-fugitive'               " Git wrapper
-Plugin 'airblade/vim-gitgutter'           " Git diffs in the gutter
-Plugin 'ryanoasis/vim-devicons'           " File type icons
+Plugin 'tpope/vim-sensible'                   " Sensible default settings
+Plugin 'altercation/vim-colors-solarized'     " Solorazied colour scheme
+Plugin 'scrooloose/nerdtree'                  " Project and files explorer
+Plugin 'Xuyuanp/nerdtree-git-plugin'          " Git indicators for NERD Tree
+Plugin 'tpope/vim-fugitive'                   " Git wrapper
+Plugin 'airblade/vim-gitgutter'               " Git diffs in the gutter
+Plugin 'ryanoasis/vim-devicons'               " File type icons
 
 " Language/syntax plugins
-Plugin 'vim-syntastic/syntastic'             " Syntax checker
-Plugin 'mtscout6/syntastic-local-eslint.vim' " Prefer local eslint over global
+Plugin 'vim-syntastic/syntastic'              " Syntax checker
+Plugin 'mtscout6/syntastic-local-eslint.vim'  " Prefer local eslint over global
 
 " Finish Vundle setup, all plugins must be added before this line
 call vundle#end()
