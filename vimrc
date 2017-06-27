@@ -35,6 +35,8 @@ Plugin 'airblade/vim-gitgutter'           " Git diffs in the gutter
 Plugin 'ryanoasis/vim-devicons'           " File type icons
 
 " Language/syntax plugins
+Plugin 'vim-syntastic/syntastic'             " Syntax checker
+Plugin 'mtscout6/syntastic-local-eslint.vim' " Prefer local eslint over global
 
 " Finish Vundle setup, all plugins must be added before this line
 call vundle#end()
@@ -74,6 +76,17 @@ let g:NERDTreeIndicatorMapCustom = {
 	\ 'Ignored'   : '☒',
 	\ "Unknown"   : "?"
 	\ }
+
+" === vim-syntastic/syntastic ===
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list=1 " Populate loc list on errors
+let g:syntastic_auto_loc_list=1            " Auto popup loc list on errors
+let g:syntastic_check_on_open=1            " Runs checks on open
+let g:syntastic_check_on_wq=0              " Disable checks on :wq
+let g:syntastic_javascript_checkers=['eslint']
 
 " === ryanoasis/vim-devicons ===
 autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
