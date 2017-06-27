@@ -30,6 +30,8 @@ Plugin 'tpope/vim-sensible'               " Sensible default settings
 Plugin 'altercation/vim-colors-solarized' " Solorazied colour scheme
 Plugin 'scrooloose/nerdtree'              " Project and files explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin'      " Git indicators for NERD Tree
+Plugin 'tpope/vim-fugitive'               " Git wrapper
+Plugin 'airblade/vim-gitgutter'           " Git diffs in the gutter
 
 " Language/syntax plugins
 
