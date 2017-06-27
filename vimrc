@@ -32,6 +32,7 @@ Plugin 'scrooloose/nerdtree'              " Project and files explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin'      " Git indicators for NERD Tree
 Plugin 'tpope/vim-fugitive'               " Git wrapper
 Plugin 'airblade/vim-gitgutter'           " Git diffs in the gutter
+Plugin 'ryanoasis/vim-devicons'           " File type icons
 
 " Language/syntax plugins
 
@@ -43,6 +44,7 @@ filetype plugin indent on
 
 " === STYLE & FORMATTING ===
 syntax on
+set encoding=utf-8
 set background=dark
 colorscheme solarized
 
@@ -72,6 +74,10 @@ let g:NERDTreeIndicatorMapCustom = {
 	\ 'Ignored'   : '☒',
 	\ "Unknown"   : "?"
 	\ }
+
+" === ryanoasis/vim-devicons ===
+autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
+let g:WebDevIconsNerdTreeAfterGlyphPadding='' " Reduce space after glyph character
 " === PLUGINS CONFIG ===
 
 

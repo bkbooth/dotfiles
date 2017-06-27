@@ -2,7 +2,7 @@
 " Setup font
 set linespace=2
 set macligatures
-set guifont=Fira\ Code:h12
+set guifont=FiraCode-Regular:h12
 " === STYLE & FORMATTING ===
 
 
