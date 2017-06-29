@@ -2,8 +2,6 @@
 " Reference: http://vimdoc.sourceforge.net/htmldoc/options.html
 " Some sensible defaults set by vim-sensible (https://github.com/tpope/vim-sensible)
 set nocompatible  " Use Vim settings rather then Vi settings. Must be first!
-set showcmd       " Show (partial) command in the last line of the screen
-set showmode      " If in Insert, Replace or Visual mode put a message on the last line
 set hlsearch      " When there is a previous search pattern, highlight all its matches
 set autoindent    " Copy indent from current line when starting a new line
 set hidden        " Allow background buffers
@@ -11,6 +9,7 @@ set visualbell    " Use visual bell instead of beeping
 set noswapfile    " Disable swapfiles
 set nobackup      " ...
 set nowb          " ...
+set laststatus=2  " Always show statusline (airline)
 let mapleader=',' " Map , as leader
 " === GENERAL SETTINGS ===
 
@@ -91,10 +90,6 @@ let g:NERDTreeIndicatorMapCustom = {
 	\ }
 
 " === vim-syntastic/syntastic ===
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list=1  " Populate loc list on errors
 let g:syntastic_auto_loc_list=1             " Auto popup loc list on errors
 let g:syntastic_check_on_open=1             " Runs checks on open
@@ -105,8 +100,11 @@ let g:syntastic_warning_symbol=''          " Override syntastic warning symbo
 let g:syntastic_javascript_checkers=['eslint']
 
 " === vim-airline/vim-airline ===
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts=1
+let g:airline_theme='solarized'             " Solarized colour scheme
+let g:airline_powerline_fonts=1             " Use powerline fonts
+let g:airline_skip_empty_sections=1         " Don't show empty sections
+let g:airline_left_sep=''                   " Don't use separators in terminal
+let g:airline_right_sep=''                  " ...
 
 " === ryanoasis/vim-devicons ===
 autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
