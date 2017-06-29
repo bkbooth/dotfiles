@@ -41,8 +41,7 @@ Plugin 'vim-airline/vim-airline-themes'       " Themes for vim-airline
 
 " Language/syntax plugins
 Plugin 'vim-syntastic/syntastic'              " Syntax checker
-Plugin 'mtscout6/syntastic-local-eslint.vim'  " Prefer local eslint over global
-Plugin 'tpope/vim-git'                        " Support for various git files
+Plugin 'tpope/vim-git'
 Plugin 'pangloss/vim-javascript', { 'branch': 'develop' }
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'leshill/vim-json'
@@ -100,6 +99,7 @@ let g:syntastic_always_populate_loc_list=1  " Populate loc list on errors
 let g:syntastic_auto_loc_list=1             " Auto popup loc list on errors
 let g:syntastic_check_on_open=1             " Runs checks on open
 let g:syntastic_check_on_wq=0               " Disable checks on :wq
+let g:syntastic_loc_list_height=5           " Set max height on loc list
 let g:syntastic_error_symbol=''            " Override syntastic error symbol
 let g:syntastic_warning_symbol=''          " Override syntastic warning symbol
 let g:syntastic_javascript_checkers=['eslint']
