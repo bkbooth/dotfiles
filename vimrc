@@ -26,7 +26,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Various plugins
 Plugin 'tpope/vim-sensible'                   " Sensible default settings
-Plugin 'altercation/vim-colors-solarized'     " Solorazied colour scheme
+Plugin 'altercation/vim-colors-solarized'     " Solarized colour scheme
 Plugin 'scrooloose/nerdtree'                  " Project and files explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin'          " Git indicators for NERD Tree
 Plugin 'tpope/vim-fugitive'                   " Git wrapper
