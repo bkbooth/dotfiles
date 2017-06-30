@@ -10,29 +10,33 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" Various plugins
+" === UI and feature plugins ===
 Plugin 'tpope/vim-sensible'                   " Sensible default settings
 Plugin 'altercation/vim-colors-solarized'     " Solarized colour scheme
 Plugin 'scrooloose/nerdtree'                  " Project and files explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin'          " Git indicators for NERD Tree
-Plugin 'tpope/vim-fugitive'                   " Git wrapper
-Plugin 'airblade/vim-gitgutter'               " Git diffs in the gutter
-Plugin 'ryanoasis/vim-devicons'               " File type icons
-Plugin 'tpope/vim-surround'                   " Easily add/change/delete surrounds
-Plugin 'scrooloose/nerdcommenter'             " Commenting utils
-Plugin 'editorconfig/editorconfig-vim'        " Respect .editorconfig files
 Plugin 'vim-airline/vim-airline'              " Powerful statusline
 Plugin 'vim-airline/vim-airline-themes'       " Themes for vim-airline
+Plugin 'ctrlpvim/ctrlp.vim'                   " Full path fuzzy finder
+Plugin 'tpope/vim-fugitive'                   " Git wrapper
+Plugin 'tpope/vim-rhubarb'                    " GitHub wrapper for fugitive
+Plugin 'airblade/vim-gitgutter'               " Git diffs in the gutter
+Plugin 'ryanoasis/vim-devicons'               " File type icons
 
-" Language/syntax plugins
+" === Text editing plugins ===
+Plugin 'tpope/vim-repeat'                     " Make '.' repeats work with mapped commands
+Plugin 'tpope/vim-eunuch'                     " Vim sugar for common unix shell commands
+Plugin 'tpope/vim-surround'                   " Easily add/change/delete surrounds
+Plugin 'tpope/vim-abolish'                    " Shortcuts for quick case-change (plus loads more!)
+Plugin 'tpope/vim-commentary'                 " Commenting utils
+Plugin 'Raimondi/delimitMate'                 " Insert mode autocomplete for quotes, brackets, etc.
+Plugin 'vim-scripts/DeleteTrailingWhitespace' " Delete unwanted whitespace
+
+" === Language/syntax plugins ===
 Plugin 'vim-syntastic/syntastic'              " Syntax checker
-Plugin 'tpope/vim-git'
-Plugin 'pangloss/vim-javascript', { 'branch': 'develop' }
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'leshill/vim-json'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/tsuquyomi', { 'for': 'typescript' }
-Plugin 'ElmCast/elm-vim'
+Plugin 'editorconfig/editorconfig-vim'        " Respect .editorconfig files
+Plugin 'sheerun/vim-polyglot'                 " Solid language pack (https://github.com/sheerun/vim-polyglot#language-packs)
+Plugin 'ap/vim-css-color'                     " Colours highlighter
 
 " Finish Vundle setup, all plugins must be added before this line
 call vundle#end()
