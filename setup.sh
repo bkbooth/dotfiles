@@ -24,3 +24,15 @@ if ! [[ -d ~/.vim/bundle/Vundle.vim ]]; then
 fi
 # Install/update Vundle dependencies
 vim -c VundleUpdate -c quitall
+echo "Done."
+
+# Do some Mac-specific things
+if [ "$(uname)" == "Darwin" ]; then
+  echo "Copying fonts..."
+  cp ./fonts/* ~/Library/Fonts/
+  echo "Done."
+
+  echo "Manually install the 'sources/My Solarized Dark.terminal' colour scheme."
+fi
+
+echo "Manually install ripgrep: https://github.com/BurntSushi/ripgrep"
