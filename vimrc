@@ -106,9 +106,9 @@ augroup filetype_detect
   autocmd FileType text setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 spell
   autocmd FileType markdown setlocal iskeyword-=/ wrap linebreak nolist textwidth=0 wrapmargin=0 spell
 
-	autocmd FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
-	autocmd FileType html,xml,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
+  autocmd FileType html,xml,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+  autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
   autocmd Filetype elm setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 augroup END
 " === GENERAL CONFIG ===
@@ -122,17 +122,17 @@ let NERDTreeIgnore=['\~$', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_compon
 
 " === Xuyuanp/nerdtree-git-plugin ===
 let g:NERDTreeIndicatorMapCustom = {
-	\ 'Modified'  : '',
-	\ 'Staged'    : '',
-	\ 'Untracked' : '',
-	\ 'Renamed'   : '',
-	\ 'Unmerged'  : '',
-	\ 'Deleted'   : '',
-	\ 'Dirty'     : '',
-	\ 'Clean'     : '',
-	\ 'Ignored'   : '',
-	\ 'Unknown'   : ''
-	\ }
+  \ 'Modified'  : '',
+  \ 'Staged'    : '',
+  \ 'Untracked' : '',
+  \ 'Renamed'   : '',
+  \ 'Unmerged'  : '',
+  \ 'Deleted'   : '',
+  \ 'Dirty'     : '',
+  \ 'Clean'     : '',
+  \ 'Ignored'   : '',
+  \ 'Unknown'   : ''
+  \ }
 
 " === ctrlpvim/ctrlp.vim ===
 if executable('rg')
