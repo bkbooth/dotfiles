@@ -1,20 +1,6 @@
-" === GENERAL SETTINGS ===
-" Reference: http://vimdoc.sourceforge.net/htmldoc/options.html
-" Some sensible defaults set by vim-sensible (https://github.com/tpope/vim-sensible)
-set nocompatible  " Use Vim settings rather then Vi settings. Must be first!
-set hlsearch      " When there is a previous search pattern, highlight all its matches
-set autoindent    " Copy indent from current line when starting a new line
-set hidden        " Allow background buffers
-set visualbell    " Use visual bell instead of beeping
-set noswapfile    " Disable swapfiles
-set nobackup      " ...
-set nowb          " ...
-set laststatus=2  " Always show statusline (airline)
-let mapleader=',' " Map , as leader
-" === GENERAL SETTINGS ===
+set nocompatible " Use Vim settings rather then Vi settings. Must be first!
 
-
-" === VUNDLE ===
+" === VUNDLE SETUP ===
 filetype off
 
 " Set the runtime path to include Vundle and initialize
@@ -51,7 +37,22 @@ Plugin 'ElmCast/elm-vim'
 " Finish Vundle setup, all plugins must be added before this line
 call vundle#end()
 filetype plugin indent on
-" === VUNDLE ===
+" === VUNDLE SETUP ===
+
+
+" === GENERAL SETTINGS ===
+" Reference: http://vimdoc.sourceforge.net/htmldoc/options.html
+" Some sensible defaults set by vim-sensible (https://github.com/tpope/vim-sensible)
+set hlsearch      " When there is a previous search pattern, highlight all its matches
+set autoindent    " Copy indent from current line when starting a new line
+set hidden        " Allow background buffers
+set visualbell    " Use visual bell instead of beeping
+set noswapfile    " Disable swapfiles
+set nobackup      " ...
+set nowb          " ...
+set laststatus=2  " Always show statusline (airline)
+let mapleader=',' " Map , as leader
+" === GENERAL SETTINGS ===
 
 
 " === STYLE & FORMATTING ===
