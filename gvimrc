@@ -8,7 +8,7 @@ set guifont=FiraCode-Retina:h12
 
 " === PLUGINS CONFIG ===
 " === scrooloose/nerdtree ===
-autocmd vimenter * NERDTree
+autocmd GUIEnter * NERDTree
 
 " === vim-airline/vim-airline ===
 let g:airline_left_sep='▙'
