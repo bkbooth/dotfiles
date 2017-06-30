@@ -36,6 +36,7 @@ Plugin 'vim-scripts/DeleteTrailingWhitespace' " Delete unwanted whitespace
 Plugin 'vim-syntastic/syntastic'              " Syntax checker
 Plugin 'editorconfig/editorconfig-vim'        " Respect .editorconfig files
 Plugin 'sheerun/vim-polyglot'                 " Solid language pack (https://github.com/sheerun/vim-polyglot#language-packs)
+Plugin 'ElmCast/elm-vim'                      " Better elm support
 Plugin 'ap/vim-css-color'                     " Colours highlighter
 
 " Finish Vundle setup, all plugins must be added before this line
@@ -160,6 +161,13 @@ let g:syntastic_loc_list_height=5           " Set max height on loc list
 let g:syntastic_error_symbol=''            " Override syntastic error symbol
 let g:syntastic_warning_symbol=''          " Override syntastic warning symbol
 let g:syntastic_javascript_checkers=['eslint']
+let g:elm_syntastic_show_warnings=1
+
+" === sheerun/vim-polyglot ===
+let g:polyglot_disabled=['elm']             " Disable some polyglot languages
+
+" === ElmCast/elm-vim ===
+let g:elm_format_autosave=1                 " Run elm-format on save
 " === PLUGINS CONFIG ===
 
 
