@@ -1,4 +1,4 @@
-set nocompatible " Use Vim settings rather then Vi settings. Must be first!
+set nocompatible " Vim not vi, must be first!
 
 " === VUNDLE SETUP ===
 filetype off
@@ -44,34 +44,73 @@ filetype plugin indent on
 " === VUNDLE SETUP ===
 
 
-" === GENERAL SETTINGS ===
+" === GENERAL CONFIG ===
 " Reference: http://vimdoc.sourceforge.net/htmldoc/options.html
 " Some sensible defaults set by vim-sensible (https://github.com/tpope/vim-sensible)
-set hlsearch      " When there is a previous search pattern, highlight all its matches
-set autoindent    " Copy indent from current line when starting a new line
-set hidden        " Allow background buffers
-set visualbell    " Use visual bell instead of beeping
-set noswapfile    " Disable swapfiles
-set nobackup      " ...
-set nowb          " ...
-set laststatus=2  " Always show statusline (airline)
-let mapleader=',' " Map , as leader
-" === GENERAL SETTINGS ===
+" autoindent, backspace, ttimeout, incsearch, laststatus, ruler, wildmenu, history
+set ttyfast                     " Send more characters at a time
+set mouse=a                     " Enable mouse in all modes
+set clipboard=unnamed           " Use the OS clipboard by default
+set nostartofline               " Prevent some commands moving cursor to start of line
 
+" === Text and editing ===
+set encoding=utf-8              " Use utf-8 for character encoding
+set spelllang=en_au,en_gb,en_au " Spell checking languages
+set expandtab                   " Use spaces instead of tabs
+set tabstop=2                   " 2 spaces for hard tabs
+set softtabstop=2               " 2 spaces for soft tabs
+set shiftwidth=2                " 2 spaces for indents
+set shiftround                  " Round indents to multiples of 'shiftwidth'
+set smartindent                 " Smart autoindenting when starting a new line
+set ignorecase                  " Ignore case in search patterns
+set smartcase                   " Obey case if search pattern contains uppercase
+set iskeyword+=-,_,$,@,%,#,?    " These are not word dividers
+" Disable continuing comments on new lines
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
-" === STYLE & FORMATTING ===
-syntax on
-set encoding=utf-8
-set background=dark
-colorscheme solarized
+" === Appearance ===
+syntax on                       " Enable syntax highlighting
+colorscheme solarized           " Set colour scheme (solarized all the things!)
+set background=dark             " Use dark colour scheme variant
+set showcmd                     " Show (partial) command while typing
+set lazyredraw                  " Don't redraw when we don't have to
+set hlsearch                    " Highlight all search matches
+set visualbell                  " Use visual bell instead of beeping
+set showbreak=↪\                " Character to display at the start of soft-wrapped lines
+set scrolloff=3                 " Minimum lines to show above/below cursor
+set sidescrolloff=3             " Minimum characters to show beside cursor
 
-" Use the appropriate number of spaces to insert a tab
-set expandtab
-" Default to 2 spaces
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
-" === STYLE & FORMATTING ===
+" === Files and buffers ===
+silent !mkdir -p $HOME/.vim/undo > /dev/null 2>&1
+set undodir=~/.vim/undo         " Directory to save undo files
+set undofile                    " Persist undo history to a file
+set undolevels=1000             " Maximum number of changes that can be undone
+set noswapfile                  " Don't create swap files
+set nobackup                    " Don't make a backup before overwriting a file
+set nowritebackup               " Don't make a backup before writing a file
+set hidden                      " Allow buffers to exist in the background
+set autoread                    " Re-read open files when changed outside Vim
+" File patterns to ignore when expanding wildcards
+set wildignore+=.DS_Store
+set wildignore+=*/.git/*
+set wildignore+=*/.sass-cache/*
+set wildignore+=*/node_modules/*,*/bower_components/*,*/elm-stuff/*
+set wildignore+=*/log/*,*/tmp/*,*/build/*,*/dist/*,*/doc/*,*/vendor/*
+set wildignore+=*.gif,*.jpeg,*.jpg,*.png,*.psd
+
+" === File types ===
+set omnifunc=syntaxcomplete#Complete
+
+augroup filetype_detect
+  autocmd FileType text setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 spell
+  autocmd FileType markdown setlocal iskeyword-=/ wrap linebreak nolist textwidth=0 wrapmargin=0 spell
+
+	autocmd FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
+	autocmd FileType html,xml,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+  autocmd Filetype elm setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+augroup END
+" === GENERAL CONFIG ===
 
 
 " === PLUGINS CONFIG ===
@@ -94,15 +133,12 @@ let g:NERDTreeIndicatorMapCustom = {
 	\ 'Unknown'   : ''
 	\ }
 
-" === vim-syntastic/syntastic ===
-let g:syntastic_always_populate_loc_list=1  " Populate loc list on errors
-let g:syntastic_auto_loc_list=1             " Auto popup loc list on errors
-let g:syntastic_check_on_open=1             " Runs checks on open
-let g:syntastic_check_on_wq=0               " Disable checks on :wq
-let g:syntastic_loc_list_height=5           " Set max height on loc list
-let g:syntastic_error_symbol=''            " Override syntastic error symbol
-let g:syntastic_warning_symbol=''          " Override syntastic warning symbol
-let g:syntastic_javascript_checkers=['eslint']
+" === ctrlpvim/ctrlp.vim ===
+if executable('rg')
+  set grepprg=rg\ --color=never
+  let g:ctrlp_user_command='rg %s --files --color=never --glob ""'
+  let g:ctrlp_use_caching=0
+endif
 
 " === vim-airline/vim-airline ===
 let g:airline_theme='solarized'             " Solarized colour scheme
@@ -114,10 +150,22 @@ let g:airline_right_sep=''                  " ...
 " === ryanoasis/vim-devicons ===
 autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
 let g:WebDevIconsNerdTreeAfterGlyphPadding=''       " Reduce space after glyph character
+
+" === vim-syntastic/syntastic ===
+let g:syntastic_always_populate_loc_list=1  " Populate loc list on errors
+let g:syntastic_auto_loc_list=1             " Auto popup loc list on errors
+let g:syntastic_check_on_open=1             " Runs checks on open
+let g:syntastic_check_on_wq=0               " Disable checks on :wq
+let g:syntastic_loc_list_height=5           " Set max height on loc list
+let g:syntastic_error_symbol=''            " Override syntastic error symbol
+let g:syntastic_warning_symbol=''          " Override syntastic warning symbol
+let g:syntastic_javascript_checkers=['eslint']
 " === PLUGINS CONFIG ===
 
 
 " === KEY MAPPINGS ===
+let mapleader=','
+
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
