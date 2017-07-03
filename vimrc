@@ -52,7 +52,6 @@ filetype plugin indent on
 " autoindent, backspace, ttimeout, incsearch, laststatus, ruler, wildmenu, history
 set ttyfast                     " Send more characters at a time
 set mouse=a                     " Enable mouse in all modes
-set clipboard=unnamed           " Use the OS clipboard by default
 set nostartofline               " Prevent some commands moving cursor to start of line
 
 " === Text and editing ===
