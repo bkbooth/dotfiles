@@ -36,6 +36,7 @@ Plugin 'vim-scripts/DeleteTrailingWhitespace' " Delete unwanted whitespace
 Plugin 'vim-syntastic/syntastic'              " Syntax checker
 Plugin 'editorconfig/editorconfig-vim'        " Respect .editorconfig files
 Plugin 'sheerun/vim-polyglot'                 " Solid language pack (https://github.com/sheerun/vim-polyglot#language-packs)
+Plugin 'tpope/vim-markdown'                   " Better markdown support (fenced code blocks)
 Plugin 'ElmCast/elm-vim'                      " Better elm support
 Plugin 'ap/vim-css-color'                     " Colours highlighter
 
@@ -164,10 +165,13 @@ let g:syntastic_javascript_checkers=['eslint']
 let g:elm_syntastic_show_warnings=1
 
 " === sheerun/vim-polyglot ===
-let g:polyglot_disabled=['elm']             " Disable some polyglot languages
+let g:polyglot_disabled=['elm', 'markdown'] " Disable some vim-polyglot languages
 
 " === ElmCast/elm-vim ===
 let g:elm_format_autosave=1                 " Run elm-format on save
+
+" === tpope/vim-markdown ===
+let g:markdown_fenced_languages=['javascript', 'js=javascript', 'json', 'css', 'sass', 'scss', 'html', 'xml', 'elm']
 " === PLUGINS CONFIG ===
 
 
