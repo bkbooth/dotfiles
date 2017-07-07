@@ -118,7 +118,8 @@ augroup END
 " === scrooloose/nerdtree ===
 let NERDTreeWinSize=40
 let NERDTreeShowHidden=1
-let NERDTreeIgnore=['\~$', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'public$[[dir]]', 'tmp$[[dir]]', 'dist$[[dir]]']
+" let NERDTreeRespectWildIgnore=1
+let NERDTreeIgnore=['\~$', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'public$[[dir]]', 'tmp$[[dir]]', 'dist$[[dir]]', 'elm-stuff$[[dir]]']
 
 " === Xuyuanp/nerdtree-git-plugin ===
 let g:NERDTreeIndicatorMapCustom = {
