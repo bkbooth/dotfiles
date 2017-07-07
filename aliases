@@ -2,6 +2,7 @@
 alias gco="git checkout"
 alias gs="git status"
 alias gd="git diff"
+alias gb="git branch"
 alias ga="git add"
 alias gc="git commit"
 alias gcm="gc -m"
