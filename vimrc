@@ -190,6 +190,9 @@ noremap <Leader>p :set paste! paste?<CR>
 set pastetoggle=<Leader>p
 " Select block
 nnoremap <Leader>v vi{
+" CtrlP for buffer and MRU lists
+noremap <Leader>b :CtrlPBuffer<CR>
+noremap <Leader>r :CtrlPMRUFiles<CR>
 
 " Easier window moving and resizing
 nnoremap <C-h> <C-w>h
