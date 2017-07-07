@@ -185,6 +185,9 @@ vnoremap ; :
 inoremap jk <Esc>
 " Temporarily disable search highlight
 nnoremap <silent> <Leader>n :silent :nohlsearch<CR>
+" Toggle paste mode and echo new mode
+noremap <Leader>p :set paste! paste?<CR>
+set pastetoggle=<Leader>p
 " Select block
 nnoremap <Leader>v vi{
 
