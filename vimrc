@@ -65,7 +65,7 @@ set shiftround                  " Round indents to multiples of 'shiftwidth'
 set smartindent                 " Smart autoindenting when starting a new line
 set ignorecase                  " Ignore case in search patterns
 set smartcase                   " Obey case if search pattern contains uppercase
-set iskeyword+=-,_,$,@,%,#,?    " These are not word dividers
+set iskeyword+=$,@,%,#,?        " These are not word dividers
 " Disable continuing comments on new lines
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
