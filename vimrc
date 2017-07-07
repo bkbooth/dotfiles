@@ -201,6 +201,8 @@ noremap <Leader>/ :Commentary<CR>
 " Toggle and find file in NERD Tree
 noremap <Leader>t :NERDTreeToggle<CR>
 noremap <Leader>f :NERDTreeFind<CR>
+" Open file on GitHub
+noremap <Leader>g :Gbrowse<CR>
 
 " Easier window moving and resizing
 nnoremap <C-h> <C-w>h
