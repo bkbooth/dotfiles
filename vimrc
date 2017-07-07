@@ -181,12 +181,12 @@ let mapleader=','
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
-" Select block
-nnoremap <leader>v v%
 " Escape visual mode easily
 inoremap jk <Esc>
 " Temporarily disable search highlight
-nmap <silent> <leader>n :silent :nohlsearch<CR>
+nnoremap <silent> <Leader>n :silent :nohlsearch<CR>
+" Select block
+nnoremap <Leader>v vi{
 
 " Easier window moving and resizing
 nnoremap <C-h> <C-w>h
