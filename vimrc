@@ -18,6 +18,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'          " Git indicators for NERD Tree
 Plugin 'vim-airline/vim-airline'              " Powerful statusline
 Plugin 'vim-airline/vim-airline-themes'       " Themes for vim-airline
 Plugin 'ctrlpvim/ctrlp.vim'                   " Full path fuzzy finder
+Plugin 'jremmen/vim-ripgrep'                  " Vim bindings for ripgrep
 Plugin 'tpope/vim-fugitive'                   " Git wrapper
 Plugin 'tpope/vim-rhubarb'                    " GitHub wrapper for fugitive
 Plugin 'airblade/vim-gitgutter'               " Git diffs in the gutter
@@ -188,6 +189,8 @@ nnoremap <silent> <Leader>n :silent :nohlsearch<CR>
 " Toggle paste mode and echo new mode
 noremap <Leader>p :set paste! paste?<CR>
 set pastetoggle=<Leader>p
+" Search project with ripgrep
+nnoremap \ :Rg<Space>
 " Select block
 nnoremap <Leader>v vi{
 " CtrlP for buffer and MRU lists
