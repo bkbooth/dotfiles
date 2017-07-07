@@ -1,5 +1,10 @@
 # Git
 alias gco="git checkout"
+alias gs="git status"
+alias gd="git diff"
+alias ga="git add"
+alias gc="git commit"
+alias gcm="gc -m"
 
 # Docker
 alias dps="docker ps"
@@ -11,3 +16,18 @@ alias drmi="docker rmi"
 alias drmid="drmi \$(did -q)"
 alias dcb="docker-compose build"
 alias dcu="docker-compose up"
+
+# Ember
+alias es="ember serve"
+alias et="ember test --server"
+
+# Blake / bx
+alias blake="cd ~/Blake"
+alias blember="cd ~/Blake/blake-ember"
+alias tui="cd ~/Blake/blake-ember/app/teacher-ui-client"
+alias dui="cd ~/Blake/blake-ember/app/district-ui-client"
+alias rejr="cd ~/Blake/blake-ember/app/readingeggs-junior-client"
+alias wfs="cd ~/Blake/blake-ember/app/wf-student-client"
+alias wft="cd ~/Blake/blake-ember/app/wf-teacher-client"
+alias beds="bx ember-deploy-staging"
+alias bedsc="beds --container"
