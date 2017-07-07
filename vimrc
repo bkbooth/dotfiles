@@ -193,6 +193,9 @@ nnoremap <Leader>v vi{
 " CtrlP for buffer and MRU lists
 noremap <Leader>b :CtrlPBuffer<CR>
 noremap <Leader>r :CtrlPMRUFiles<CR>
+" Toggle and find file in NERD Tree
+noremap <Leader>t :NERDTreeToggle<CR>
+noremap <Leader>f :NERDTreeFind<CR>
 
 " Easier window moving and resizing
 nnoremap <C-h> <C-w>h
