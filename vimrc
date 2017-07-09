@@ -209,8 +209,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-nnoremap <Leader>h :vertical resize -1<CR>
-nnoremap <Leader>l :vertical resize +1<CR>
+nnoremap <Leader>h :vertical resize -5<CR>
+nnoremap <Leader>H :vertical resize -1<CR>
+nnoremap <Leader>l :vertical resize +5<CR>
+nnoremap <Leader>L :vertical resize +1<CR>
 nnoremap <Leader>j :resize +1<CR>
 nnoremap <Leader>k :resize -1<CR>
 " === KEY MAPPINGS ===
