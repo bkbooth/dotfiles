@@ -177,6 +177,9 @@ let mapleader=','
 " Use ; for : in normal and visual mode, less keystrokes
 nnoremap ; :
 vnoremap ; :
+" System Cmd/Ctrl copy in visual mode
+vnoremap <D-c> "+y
+vnoremap <C-c> "+y
 " Escape visual mode easily
 inoremap jk <Esc>
 " Temporarily disable search highlight
