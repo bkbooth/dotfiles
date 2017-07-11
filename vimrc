@@ -34,7 +34,7 @@ Plugin 'Raimondi/delimitMate'                 " Insert mode autocomplete for quo
 Plugin 'vim-scripts/DeleteTrailingWhitespace' " Delete unwanted whitespace
 
 " === Language/syntax plugins ===
-Plugin 'vim-syntastic/syntastic'              " Syntax checker
+Plugin 'w0rp/ale'                             " Async syntax checker
 Plugin 'editorconfig/editorconfig-vim'        " Respect .editorconfig files
 Plugin 'sheerun/vim-polyglot'                 " Solid language pack (https://github.com/sheerun/vim-polyglot#language-packs)
 Plugin 'tpope/vim-markdown'                   " Better markdown support (fenced code blocks)
@@ -154,16 +154,11 @@ let g:airline_right_sep=''                  " ...
 autocmd FileType nerdtree setlocal ambiwidth=double " https://github.com/ryanoasis/vim-devicons/issues/133
 let g:WebDevIconsNerdTreeAfterGlyphPadding=''       " Reduce space after glyph character
 
-" === vim-syntastic/syntastic ===
-let g:syntastic_always_populate_loc_list=1  " Populate loc list on errors
-let g:syntastic_auto_loc_list=1             " Auto popup loc list on errors
-let g:syntastic_check_on_open=1             " Runs checks on open
-let g:syntastic_check_on_wq=0               " Disable checks on :wq
-let g:syntastic_loc_list_height=5           " Set max height on loc list
-let g:syntastic_error_symbol=''            " Override syntastic error symbol
-let g:syntastic_warning_symbol=''          " Override syntastic warning symbol
-let g:syntastic_javascript_checkers=['eslint']
-let g:elm_syntastic_show_warnings=1
+" === w0rp/ale ===
+let g:airline#extensions#ale#enabled=1      " Show ALE errors/warnings in airline
+let g:ale_linters={
+\   'javascript': ['eslint', 'jscs'],
+\}
 
 " === sheerun/vim-polyglot ===
 let g:polyglot_disabled=['elm', 'markdown'] " Disable some vim-polyglot languages
