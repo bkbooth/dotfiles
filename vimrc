@@ -30,7 +30,7 @@ Plugin 'tpope/vim-eunuch'                     " Vim sugar for common unix shell 
 Plugin 'tpope/vim-surround'                   " Easily add/change/delete surrounds
 Plugin 'tpope/vim-abolish'                    " Shortcuts for quick case-change (plus loads more!)
 Plugin 'tpope/vim-commentary'                 " Commenting utils
-Plugin 'Raimondi/delimitMate'                 " Insert mode autocomplete for quotes, brackets, etc.
+Plugin 'jiangmiao/auto-pairs'                 " Insert mode autocomplete for quotes, brackets, etc.
 Plugin 'vim-scripts/DeleteTrailingWhitespace' " Delete unwanted whitespace
 
 " === Language/syntax plugins ===
