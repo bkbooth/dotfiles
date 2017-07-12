@@ -21,7 +21,8 @@ alias dcu="docker-compose up"
 
 # Ember
 alias es="ember serve"
-alias et="ember test --server"
+alias et="ember test"
+alias ets="et --server"
 
 # Blake / bx
 alias blake="cd ~/Blake"
