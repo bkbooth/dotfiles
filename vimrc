@@ -52,7 +52,6 @@ filetype plugin indent on
 " Some sensible defaults set by vim-sensible (https://github.com/tpope/vim-sensible)
 " autoindent, backspace, ttimeout, incsearch, laststatus, ruler, wildmenu, history
 set ttyfast                     " Send more characters at a time
-set mouse=a                     " Enable mouse in all modes
 set nostartofline               " Prevent some commands moving cursor to start of line
 
 " === Text and editing ===
