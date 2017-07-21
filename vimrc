@@ -212,4 +212,10 @@ nnoremap <Leader>l :vertical resize +5<CR>
 nnoremap <Leader>L :vertical resize +1<CR>
 nnoremap <Leader>j :resize +1<CR>
 nnoremap <Leader>k :resize -1<CR>
+
+" Disable arrow keys to break habits
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+noremap <Up> <Nop>
+noremap <Down> <Nop>
 " === KEY MAPPINGS ===
