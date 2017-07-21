@@ -23,6 +23,7 @@ Plugin 'tpope/vim-fugitive'                   " Git wrapper
 Plugin 'tpope/vim-rhubarb'                    " GitHub wrapper for fugitive
 Plugin 'airblade/vim-gitgutter'               " Git diffs in the gutter
 Plugin 'ryanoasis/vim-devicons'               " File type icons
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight' " Colour highlights for file type icons
 
 " === Text editing plugins ===
 Plugin 'tpope/vim-repeat'                     " Make '.' repeats work with mapped commands
