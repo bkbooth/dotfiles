@@ -1,8 +1,6 @@
 " === STYLE & FORMATTING ===
 " Setup font
-set linespace=2
-set macligatures
-set guifont=FiraCode-Retina:h12
+set guifont=Knack\ Regular\ Nerd\ Font\ Complete:h12
 " === STYLE & FORMATTING ===
 
 
