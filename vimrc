@@ -120,7 +120,7 @@ augroup END
 let NERDTreeWinSize=40
 let NERDTreeShowHidden=1
 " let NERDTreeRespectWildIgnore=1
-let NERDTreeIgnore=['\~$', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'tmp$[[dir]]', 'elm-stuff$[[dir]]']
+let NERDTreeIgnore=['\~$', '\.DS_Store', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'tmp$[[dir]]', 'elm-stuff$[[dir]]']
 
 " === Xuyuanp/nerdtree-git-plugin ===
 let g:NERDTreeIndicatorMapCustom = {
