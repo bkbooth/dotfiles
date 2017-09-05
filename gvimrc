@@ -1,5 +1,6 @@
 " === STYLE & FORMATTING ===
 " Setup font
+set linespace=2
 set guifont=Knack\ Regular\ Nerd\ Font\ Complete:h12
 " === STYLE & FORMATTING ===
 
@@ -9,8 +10,8 @@ set guifont=Knack\ Regular\ Nerd\ Font\ Complete:h12
 autocmd GUIEnter * NERDTree
 
 " === vim-airline/vim-airline ===
-let g:airline_left_sep='▙'
-let g:airline_right_sep='▟'
+let g:airline_left_sep="\uE0C0"
+let g:airline_right_sep="\uE0C2"
 " === PLUGINS CONFIG ===
 
 
