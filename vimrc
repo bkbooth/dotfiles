@@ -105,6 +105,7 @@ set wildignore+=*.gif,*.jpeg,*.jpg,*.png,*.psd
 set omnifunc=syntaxcomplete#Complete
 
 augroup filetype_detect
+  autocmd!
   autocmd FileType text setlocal wrap linebreak nolist textwidth=0 wrapmargin=0 spell
   autocmd FileType markdown setlocal iskeyword-=/ wrap linebreak nolist textwidth=0 wrapmargin=0 spell
 
