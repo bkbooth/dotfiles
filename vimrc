@@ -189,7 +189,7 @@ nnoremap <silent> <Leader>n :silent :nohlsearch<CR>
 noremap <Leader>p :set paste! paste?<CR>
 set pastetoggle=<Leader>p
 " Search project with ripgrep
-nnoremap \ :Rg<Space>
+nnoremap <Leader>\ :Rg<Space>
 " Select block
 nnoremap <Leader>v vi{
 " CtrlP for buffer and MRU lists
