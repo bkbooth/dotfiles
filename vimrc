@@ -160,6 +160,7 @@ let g:WebDevIconsNerdTreeAfterGlyphPadding=''       " Reduce space after glyph c
 let g:airline#extensions#ale#enabled=1      " Show ALE errors/warnings in airline
 let g:ale_linters={
 \   'javascript': ['eslint', 'jscs'],
+\   'typescript': ['tslint', 'tsserver', 'typecheck'],
 \}
 
 " === sheerun/vim-polyglot ===
