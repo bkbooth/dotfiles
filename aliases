@@ -1,3 +1,5 @@
+alias adsf=asdf
+
 # Git
 alias gco="git checkout"
 alias gs="git status"
