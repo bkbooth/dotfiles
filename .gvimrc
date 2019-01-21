@@ -1,7 +1,7 @@
 " === STYLE & FORMATTING ===
 " Setup font
 set linespace=2
-set guifont=Knack\ Regular\ Nerd\ Font\ Complete:h12
+set guifont=HackNerdFontComplete-Regular:h12
 " === STYLE & FORMATTING ===
 
 
