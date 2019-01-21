@@ -1,5 +1,3 @@
-alias adsf=asdf
-
 # Git
 alias gco="git checkout"
 alias gs="git status"
@@ -26,7 +24,5 @@ alias drmid="drmi \$(did -q)"
 alias dcb="docker-compose build"
 alias dcu="docker-compose up"
 
-# Ember
-alias es="ember serve"
-alias et="ember test"
-alias ets="et --server"
+# Misc
+alias prj="cd ~/Projects"
