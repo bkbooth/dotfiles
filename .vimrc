@@ -55,6 +55,7 @@ filetype plugin indent on
 " autoindent, backspace, ttimeout, incsearch, laststatus, ruler, wildmenu, history
 set ttyfast                     " Send more characters at a time
 set nostartofline               " Prevent some commands moving cursor to start of line
+set mouse=a                     " Allow mouse input in all modes 
 
 " === Text and editing ===
 set encoding=utf-8              " Use utf-8 for character encoding
@@ -75,6 +76,7 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 syntax on                       " Enable syntax highlighting
 colorscheme solarized           " Set colour scheme (solarized all the things!)
 set background=dark             " Use dark colour scheme variant
+set number                      " Show line numbers
 set showcmd                     " Show (partial) command while typing
 set lazyredraw                  " Don't redraw when we don't have to
 set hlsearch                    " Highlight all search matches
