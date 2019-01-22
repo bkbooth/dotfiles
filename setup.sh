@@ -35,7 +35,7 @@ if [ "$(uname)" == "Darwin" ]; then
   cp ./fonts/* ~/Library/Fonts/
   echo "Done."
 
-  echo "Manually install the 'sources/My Solarized Dark.terminal' colour scheme."
+  echo "Manually install the 'sources/My Settings.terminal' terminal settings."
 else
   echo "Please check git, vim and zsh versions"
   echo "Manually install ripgrep: https://github.com/BurntSushi/ripgrep"
