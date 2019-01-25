@@ -12,6 +12,7 @@ alias gf="git fetch"
 alias gfp="gf --prune"
 alias gp="git pull"
 alias gup="gp --rebase --autostash" # autostash requires git@2.9.0 or later
+alias gsue="git config user.email bkbooth@gmail.com"
 
 # Docker
 alias dps="docker ps"
