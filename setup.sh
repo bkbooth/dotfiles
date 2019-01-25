@@ -36,24 +36,6 @@ if [ "$(uname)" == "Darwin" ]; then
   ln -snf "$PWD/benbooth.zsh-theme" "${ZSH:-$HOME/.oh-my-zsh}/custom/themes/benbooth.zsh-theme"
   echo "Done."
 
-  echo "Installing and configuring node v10…"
-  source ~/.zshrc
-  nvm install 10
-  npm config set init.version "1.0.0"
-  npm config set init.license "MIT"
-  npm config set init.author.name "Ben Booth"
-  npm config set init.author.email "bkbooth@gmail.com"
-  npm config set init.author.url "https://benbooth.co"
-  echo "Done."
-  echo "Installing and configuring yarn…"
-  brew install yarn --without-node
-  yarn config set init-version "1.0.0" -g
-  yarn config set init-license "MIT" -g
-  yarn config set init-author-name "Ben Booth" -g
-  yarn config set init-author-email "bkbooth@gmail.com" -g
-  yarn config set init-author-url "https://benbooth.co" -g
-  echo "Done."
-
   echo "Copying fonts…"
   cp ./fonts/* ~/Library/Fonts/
   echo "Done."
@@ -72,6 +54,24 @@ for file in `ls -la .`; do
     ln -snf "$PWD/$file" "$HOME/$file"
   fi
 done
+echo "Done."
+
+echo "Installing and configuring node v10…"
+[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ] && . "${NVM_DIR:-$HOME/.nvm}/nvm.sh"  # Make sure nvm is loaded
+nvm install 10
+npm config set init.version "1.0.0"
+npm config set init.license "MIT"
+npm config set init.author.name "Ben Booth"
+npm config set init.author.email "bkbooth@gmail.com"
+npm config set init.author.url "https://benbooth.co"
+echo "Done."
+echo "Installing and configuring yarn…"
+brew install yarn --without-node
+yarn config set init-version "1.0.0" -global --silent
+yarn config set init-license "MIT" -global --silent
+yarn config set init-author-name "Ben Booth" -global --silent
+yarn config set init-author-email "bkbooth@gmail.com" -global --silent
+yarn config set init-author-url "https://benbooth.co" -global --silent
 echo "Done."
 
 echo "Setting up Vundle…"
