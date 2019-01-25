@@ -1,0 +1,19 @@
+function new_project {
+  echo "Adding README.md…"
+  typeset project_name=$(basename $PWD)
+  echo "# $project_name\n\nA description of $project_name" > README.md
+  echo "Adding LICENSE…"
+  npx license $(yarn config get init-license) -o "$(yarn config get init-author-name)" > LICENSE
+  echo "Adding CODE_OF_CONDUCT.md…"
+  npx covgen "$(yarn config get init-author-email)"
+  echo "Adding .gitignore…"
+  npx gitignore node
+  echo "Initializing package.json…"
+  yarn init -y
+  echo "Initializing git…"
+  git init
+  git config user.email "$(yarn config get init-author-email)"
+  git add -A
+  git commit -m "Initial commit"
+  echo "Done! Happy hacking!"
+}

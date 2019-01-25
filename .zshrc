@@ -109,6 +109,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add aliases from dotfiles
+# Add aliases and functions from dotfiles
 source ~/.aliases
-
+source ~/.functions
