@@ -22,13 +22,16 @@ if [ "$(uname)" == "Darwin" ]; then
   echo "Done."
 
   echo "Installing oh-my-zsh…"
-  if ! [[ -d ~/.oh-my-zsh ]]; then
+  if ! [[ -d ${ZSH:-~/.oh-my-zsh} ]]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   fi
-  if ! [[ -d ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions ]]; then
-    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  if ! [[ -d ${ZSH:-~/.oh-my-zsh}/custom/plugins/zsh-autosuggestions ]]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH:-~/.oh-my-zsh}/custom/plugins/zsh-autosuggestions
   fi
-  ln -snf "$PWD/benbooth.zsh-theme" "$HOME/.oh-my-zsh/custom/themes/benbooth.zsh-theme"
+  if ! [[ -d ${ZSH:-~/.oh-my-zsh}/custom/plugins/zsh-nvm ]]; then
+    git clone https://github.com/lukechilds/zsh-nvm ${ZSH:-~/.oh-my-zsh}/custom/plugins/zsh-nvm
+  fi
+  ln -snf "$PWD/benbooth.zsh-theme" "${ZSH:-$HOME/.oh-my-zsh}/custom/themes/benbooth.zsh-theme"
   echo "Done."
 
   echo "Copying fonts…"
