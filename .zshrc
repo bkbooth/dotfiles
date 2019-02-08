@@ -62,7 +62,7 @@ ZSH_THEME="benbooth"
 
 # Setup zsh-nvm
 # Lazy load speeds up terminal loading, but pay first run cost for nvm, npm or node
-NVM_LAZY_LOAD=true
+# NVM_LAZY_LOAD=true
 # Automatically set node version when entering a directory with an .nvmrc
 # NVM_AUTO_USE=true
 
