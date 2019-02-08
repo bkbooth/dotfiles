@@ -66,7 +66,7 @@ npm config set init.author.email "bkbooth@gmail.com"
 npm config set init.author.url "https://benbooth.co"
 echo "Done."
 echo "Installing and configuring yarn…"
-brew install yarn --without-node
+brew install yarn --ignore-dependencies
 yarn config set init-version "1.0.0" -global --silent
 yarn config set init-license "MIT" -global --silent
 yarn config set init-author-name "Ben Booth" -global --silent
