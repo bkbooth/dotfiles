@@ -1,19 +1,49 @@
 function new_project {
+  if [[ -z "$1" ]]; then
+    echo "
+New Node.js project generator
+
+Usage:
+  new_project project-name
+"
+    return 1
+  fi
+
+  typeset project_name=$1
+
+  if [[ -e $project_name ]]; then
+    echo "A file or directory named '$project_name' already exists."
+    return 1
+  else
+    echo "Creating directory '$project_name'…"
+    mkdir $project_name
+  fi
+
+  # Temporarily change into new project directory
+  pushd $project_name > /dev/null
+
   echo "Adding README.md…"
-  typeset project_name=$(basename $PWD)
   echo "# $project_name\n\nA description of $project_name" > README.md
+
   echo "Adding LICENSE…"
-  npx license $(yarn config get init-license) -o "$(yarn config get init-author-name)" > LICENSE
+  npx --quiet license $(yarn config get init-license) -o "$(yarn config get init-author-name)" > LICENSE
+
   echo "Adding CODE_OF_CONDUCT.md…"
-  npx covgen "$(yarn config get init-author-email)"
+  npx --quiet covgen "$(yarn config get init-author-email)" > /dev/null
+
   echo "Adding .gitignore…"
-  npx gitignore node
+  npx --quiet gitignore node > /dev/null
+
   echo "Initializing package.json…"
-  yarn init -y
+  yarn init --yes --silent
+  
   echo "Initializing git…"
-  git init
+  git init --quiet
   git config user.email "$(yarn config get init-author-email)"
-  git add -A
-  git commit -m "Initial commit"
+  git add --all
+  git commit --quiet --message="Initial commit"
+
+  # Navigate back out of new project directory
+  popd > /dev/null
   echo "Done! Happy hacking!"
 }
