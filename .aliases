@@ -27,3 +27,4 @@ alias dcu="docker-compose up"
 
 # Misc
 alias prj="cd ~/Projects"
+alias blog="cd ~/Projects/benbooth.dev"
