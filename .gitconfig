@@ -3,7 +3,7 @@
 	editor = vim
 [user]
 	name = Ben Booth
-	email = bkbooth@gmail.com
+	email = ben@benbooth.dev
 	signingkey = 77A86371
 [pager]
   branch = false
