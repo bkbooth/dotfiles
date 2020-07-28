@@ -1,6 +1,8 @@
 [core]
 	excludesfile = /Users/ben/.gitignore_global
 	editor = vim
+[init]
+	defaultBranch = main
 [user]
 	name = Ben Booth
 	email = ben@benbooth.dev
