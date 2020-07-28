@@ -6,14 +6,14 @@ cd `dirname $0`
 # Install and setup Mac-specific things
 if [ "$(uname)" == "Darwin" ]; then
   echo "Installing Homebrew…"
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  echo "Installing git, vim, ripgrep and zsh…"
-  brew install git vim ripgrep zsh
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  echo "Installing git, ripgrep and zsh…"
+  brew install git ripgrep zsh
   echo "Done."
 
   if ! [[ -d ${NVM_DIR:-~/.nvm} ]]; then
     echo "Installing nvm…"
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
     echo "Done."
   else
     echo "Found existing nvm, skipping."
@@ -21,7 +21,7 @@ if [ "$(uname)" == "Darwin" ]; then
 
   if ! [[ -d ${ZSH:-~/.oh-my-zsh} ]]; then
     echo "Installing oh-my-zsh…"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     echo "Done."
   else
     echo "Found existing oh-my-zsh, skipping."
@@ -36,9 +36,7 @@ if [ "$(uname)" == "Darwin" ]; then
   ln -snf "$PWD/benbooth.zsh-theme" "${ZSH:-$HOME/.oh-my-zsh}/custom/themes/benbooth.zsh-theme"
   echo "Done."
 
-  echo "Copying fonts…"
-  cp ./fonts/* ~/Library/Fonts/
-  echo "Done."
+  ./fonts.sh
 
   echo "Manually install the 'sources/My Settings.terminal' terminal settings."
 else
@@ -46,38 +44,6 @@ else
   echo "Manually install ripgrep: https://github.com/BurntSushi/ripgrep"
 fi
 
-echo "Linking dotfiles…"
-for file in `ls -la .`; do
-  # Only real files that start with a .
-  if [[ $file =~ ^\..+ ]] && [[ -f $file ]]; then
-    echo "Linking $file"
-    ln -snf "$PWD/$file" "$HOME/$file"
-  fi
-done
-echo "Done."
-
-echo "Installing and configuring node v10…"
-[ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ] && . "${NVM_DIR:-$HOME/.nvm}/nvm.sh"  # Make sure nvm is loaded
-nvm install 10
-npm config set init.version "1.0.0"
-npm config set init.license "MIT"
-npm config set init.author.name "Ben Booth"
-npm config set init.author.email "ben@benbooth.dev"
-npm config set init.author.url "https://benbooth.dev"
-echo "Done."
-echo "Installing and configuring yarn…"
-brew install yarn --ignore-dependencies
-yarn config set init-version "1.0.0" -global --silent
-yarn config set init-license "MIT" -global --silent
-yarn config set init-author-name "Ben Booth" -global --silent
-yarn config set init-author-email "ben@benbooth.dev" -global --silent
-yarn config set init-author-url "https://benbooth.dev" -global --silent
-echo "Done."
-
-echo "Setting up Vundle…"
-if ! [[ -d ~/.vim/bundle/Vundle.vim ]]; then
-  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
-# Install/update Vundle dependencies
-vim -c VundleUpdate -c quitall
-echo "Done."
+./dotfiles.sh
+./node.sh
+./vim.sh
