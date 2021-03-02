@@ -26,17 +26,17 @@ Usage:
   echo "# $project_name\n\nA description of $project_name" > README.md
 
   echo "Adding LICENSE…"
-  npx --quiet license $(yarn config get init-license) -o "$(yarn config get init-author-name)" > LICENSE
+  npx --quiet --yes license $(yarn config get init-license) > LICENSE
 
   echo "Adding CODE_OF_CONDUCT.md…"
-  npx --quiet covgen "$(yarn config get init-author-email)" > /dev/null
+  npx --quiet --yes covgen "$(yarn config get init-author-email)" > /dev/null
 
   echo "Adding .gitignore…"
-  npx --quiet gitignore node > /dev/null
+  npx --quiet --yes gitignore node > /dev/null
 
   echo "Initializing package.json…"
   yarn init --yes --silent
-  
+
   echo "Initializing git…"
   git init --quiet
   git config user.email "$(yarn config get init-author-email)"
