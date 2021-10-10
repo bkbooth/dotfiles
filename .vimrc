@@ -127,7 +127,7 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore=['\~$', '\.DS_Store', '\..*$[[dir]]', 'node_modules$[[dir]]', 'bower_components$[[dir]]', 'tmp$[[dir]]', 'elm-stuff$[[dir]]']
 
 " === Xuyuanp/nerdtree-git-plugin ===
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
   \ 'Modified'  : '',
   \ 'Staged'    : '',
   \ 'Untracked' : '',
