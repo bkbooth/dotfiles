@@ -6,7 +6,7 @@
 	defaultBranch = main
 [user]
 	name = Ben Booth
-	email = ben@benbooth.dev
+	email = hey@benbooth.dev
 	signingkey = 77A86371
 [pager]
   branch = false
