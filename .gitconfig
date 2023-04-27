@@ -2,6 +2,7 @@
 	excludesfile = /Users/ben/.gitignore_global
 	editor = vim
 	ignorecase = false
+	gpgsign = true
 [init]
 	defaultBranch = main
 [user]
