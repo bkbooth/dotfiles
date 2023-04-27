@@ -7,12 +7,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" === sheerun/vim-polyglot ===
+let g:polyglot_disabled=['elm', 'markdown'] " Disable some vim-polyglot languages
+
 " Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
 " === UI and feature plugins ===
 Plugin 'tpope/vim-sensible'                   " Sensible default settings
-Plugin 'altercation/vim-colors-solarized'     " Solarized colour scheme
+" Plugin 'altercation/vim-colors-solarized'     " Solarized colour scheme
 Plugin 'scrooloose/nerdtree'                  " Project and files explorer
 Plugin 'Xuyuanp/nerdtree-git-plugin'          " Git indicators for NERD Tree
 Plugin 'vim-airline/vim-airline'              " Powerful statusline
@@ -74,8 +77,8 @@ autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 " === Appearance ===
 syntax on                       " Enable syntax highlighting
-colorscheme solarized           " Set colour scheme (solarized all the things!)
-set background=dark             " Use dark colour scheme variant
+" colorscheme solarized           " Set colour scheme (solarized all the things!)
+" set background=dark             " Use dark colour scheme variant
 set number                      " Show line numbers
 set showcmd                     " Show (partial) command while typing
 set lazyredraw                  " Don't redraw when we don't have to
@@ -164,9 +167,6 @@ let g:ale_linters={
 \   'javascript': ['eslint', 'jscs'],
 \   'typescript': ['tslint', 'tsserver', 'typecheck'],
 \}
-
-" === sheerun/vim-polyglot ===
-let g:polyglot_disabled=['elm', 'markdown'] " Disable some vim-polyglot languages
 
 " === ElmCast/elm-vim ===
 let g:elm_format_autosave=1                 " Run elm-format on save
