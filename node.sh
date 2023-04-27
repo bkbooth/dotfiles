@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "Installing and configuring node v12…"
+echo "Installing and configuring node v16…"
 [ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ] && . "${NVM_DIR:-$HOME/.nvm}/nvm.sh"  # Make sure nvm is loaded
-nvm install 12
-npm config set init.version "1.0.0"
-npm config set init.license "MIT"
-npm config set init.author.name "Ben Booth"
-npm config set init.author.email "hey@benbooth.dev"
-npm config set init.author.url "https://benbooth.dev"
+nvm install 16
+npm config set init-version="1.0.0" --global
+npm config set init-license="MIT" --global
+npm config set init-author-name="Ben Booth" --global
+npm config set init-author-email="hey@benbooth.dev" --global
+npm config set init-author-url="https://benbooth.dev" --global
 echo "Done."
 echo "Installing and configuring yarn…"
 brew install yarn
