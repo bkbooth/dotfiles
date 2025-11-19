@@ -1,8 +1,8 @@
 #!/bin/bash
 
-echo "Installing and configuring node v16…"
+echo "Installing and configuring Node.js LTS…"
 [ -s "${NVM_DIR:-$HOME/.nvm}/nvm.sh" ] && . "${NVM_DIR:-$HOME/.nvm}/nvm.sh"  # Make sure nvm is loaded
-nvm install 16
+nvm install lts/*
 npm config set init-version="1.0.0" --global
 npm config set init-license="MIT" --global
 npm config set init-author-name="Ben Booth" --global

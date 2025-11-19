@@ -13,7 +13,7 @@ if [ "$(uname)" == "Darwin" ]; then
 
   if ! [[ -d ${NVM_DIR:-~/.nvm} ]]; then
     echo "Installing nvm…"
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
     echo "Done."
   else
     echo "Found existing nvm, skipping."
