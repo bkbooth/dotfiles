@@ -47,3 +47,12 @@ Usage:
   popd > /dev/null
   echo "Done! Happy hacking!"
 }
+
+function nvmuse {
+  local node_version=$(cat .nvmrc)
+  if [[ $(nvm ls | grep $node_version) == "" ]]; then
+    nvm install $node_version
+  else
+    nvm use $node_version
+  fi
+}
