@@ -88,6 +88,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Homebrew
+eval "$(brew shellenv)"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -115,6 +118,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add aliases and functions from dotfiles
+# Aliases and functions from dotfiles
 source ~/.aliases
 source ~/.functions

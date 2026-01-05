@@ -6,7 +6,7 @@ cd `dirname $0`
 # Install and setup Mac-specific things
 if [ "$(uname)" == "Darwin" ]; then
   echo "Installing Homebrew…"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
   echo "Installing git, ripgrep and zsh…"
   brew install git ripgrep zsh
   echo "Done."
